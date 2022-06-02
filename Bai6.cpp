@@ -8,13 +8,13 @@ int main(){
 		printf("Nhap chuoi thu %d : ",i+1);
 		scanf("%s",S[i]);
 	}
-	
-	printf("%s",S[0]);
+	char Y[100];
+	strcpy(Y,S[0]);
 	
 	for(int i=0;i<10;i++){
-		if(strcmp(S[i],S[i+1])>0){
-			S[i+1]=S[i];
+		if(strcmp(Y,S[i])>0){
+			strcpy(Y,S[i]);
 		}
 	}
-	printf("%s",S[9]);
+	printf("Chuoi dung dau day anphabet la : %s",Y);
 }
